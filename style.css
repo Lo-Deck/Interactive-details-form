@@ -1,0 +1,364 @@
+:root{
+
+    /*SIZE*/
+
+    --width-mobile: 20.4375rem;
+    --width-desktop: 46rem;
+
+    /*SPACE*/
+     
+    --space_8px: 0.5rem;
+    --space_12px: 0.75rem;
+    --space_16px: 1rem;
+    --space_24px: 1.5rem;
+    --space_32px: 2rem;
+    --space_40px: 2.5rem;
+    --space_128px: 8rem;
+
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh; 
+}
+
+.background{
+    position: absolute;
+        top: 0;
+    width: 100%;
+    height: 15rem;
+    background: url(./images/bg-main-desktop.png) no-repeat top center / 100%;
+}
+
+.text{
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.125rem;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    color: hsl(278, 68%, 11%);
+}
+
+
+.error{
+    font-size: 0.8rem;
+    color: hsl(0, 100%, 66%);
+    position: absolute;      
+}
+
+.sr-only{
+    width: 0;
+    height: 0;
+    position: absolute;
+    overflow: hidden;
+}
+
+
+/*MAIN*/
+
+.container{
+    margin: var(--space_24px) auto 0;
+}
+
+.container-card{
+    max-width: 21.4375rem;
+    margin: 0 auto;
+    position: relative;
+}
+
+.container-card .text{ 
+    color: #fff;
+}
+
+.image-card{
+    width: 17.875rem;
+    height: 9.8125rem;
+}
+
+
+/*BACK-CARD*/
+
+.back-card{
+    position: relative;
+        left: 3.6rem;
+}
+
+.cvc-member{
+    color: #fff;
+    font-size: 0.625rem;
+    position: absolute;
+        top: 4.5rem; left: 14.5rem;
+}
+
+
+/*FRONT-CARD*/
+
+.front-card{
+    position: absolute;
+        top: 5.5rem;
+}
+
+.logo-card{
+    width: 3.375rem;
+    position: absolute;
+        top: 1rem; left: 1.2rem;
+}
+
+.front-card .name-member{
+    font-size: 0.6rem;  
+    position: absolute;
+        top: 8rem; left: 1.2rem;     
+}
+
+.front-card .card-member{
+    font-size: 1.2rem;
+    position: absolute;
+        top: 5.5rem; left: 1.2rem;
+}
+
+.front-card .date-member{
+    font-size: 0.6rem;
+    position: absolute;
+        top: 8rem; left: 14rem;
+}
+
+
+/*FORM*/
+
+form{
+    max-width: var(--width-mobile);
+    text-align: left;
+    margin: var(--space_128px) auto;
+}
+
+
+/*INPUT*/
+
+.container-input{
+    margin-top: var(--space_24px);
+    position: relative;
+}
+
+label.text, .date-expiration.text{
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.input-style{
+    display: block;
+    width: 100%;
+    height: 2.8125rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid hsl(279, 6%, 55%);
+    text-indent: 1rem; 
+    text-transform: none;
+    letter-spacing: 0;
+    margin-top: var(--space_8px);
+    color: hsl(279, 6%, 55%);
+}
+
+.input-style:hover{
+    cursor: pointer;
+    border: 0.1rem solid hsl(278, 68%, 11%);
+}
+
+.input-style:focus{
+    outline: none;
+    border: 0.1rem solid hsl(278, 68%, 11%);
+}
+
+.display-element-card{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, min-content);
+    column-gap: var(--space_8px);  
+    margin-top: var(--space_24px);
+    align-items: end;
+}
+
+.date-expiration{
+    grid-column: 1 / 3;
+    grid-row: 1;
+}
+
+.display-element-card .container-input:nth-of-type(1){
+    grid-column: 1;
+    grid-row: 2;  
+    margin: 0;
+}
+
+.display-element-card .container-input:nth-of-type(2){
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0;
+}
+
+.display-element-card .container-input:nth-of-type(3){
+    grid-column: 3 / 5;
+    grid-row: 1 / 3;
+    margin: 0;
+}
+
+.display-element-card .container-input:nth-of-type(3) label{
+    margin: -0.2rem;
+}
+
+
+/*SUBMIT*/
+
+.button-submit{
+    width: 100%;
+    height: 3.3125rem;    
+    background: hsl(278, 68%, 11%);
+    color: #fff; 
+    border: none;
+    border-radius: 0.5rem;
+    margin-top: var(--space_32px);
+}
+
+.button-submit:hover{
+    cursor: pointer;
+}
+
+
+/*RESULT*/
+
+.result{
+    display: block;
+    width: var(--width-mobile);
+    margin: var(--space_128px) auto 0;
+    text-align: center;
+}
+
+.image-complete{
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    margin: 0 auto var(--space_32px);
+}
+
+.title-result{
+    font-size: 2rem;
+    margin-bottom: var(--space_24px);
+}
+
+.text-result{
+    font-size: 1.1rem;
+    text-transform: none;
+    color: hsl(279, 6%, 55%);
+}
+
+
+@media screen and (min-width: 70rem)
+{
+
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text{
+        letter-spacing: 0.2rem;
+    }
+
+    .background{     
+        width: 50vw;
+        height: 100%;   
+        position: absolute;
+           top: 0; right: calc(50% + 13rem);      
+        background: url(./images/bg-main-desktop.png) no-repeat top center / 100%;
+    }
+
+    .container{
+        display: flex;
+        align-items: center;
+    }
+
+
+/*CARD*/
+
+    .container-card{
+        max-width: 100%;
+        width: 33.8125rem;
+        margin: 0 var(--space_128px) 0 0;
+        display: flex;
+        flex-direction: column-reverse;
+        position: relative;
+    }
+
+    .image-card{
+        width: 27.8125rem;
+        height: 15.3125rem;
+    }
+    
+    
+/*BACK-CARD*/
+    
+    .back-card{
+        position: relative;
+          top: 2rem;  left: 7rem;  
+    }
+    
+    .cvc-member{
+        font-size: 1rem;
+        position: absolute;
+            top: 7rem; left: 22rem;
+    }
+
+
+/*FRONT-CARD*/
+
+    .front-card{
+        position: relative;
+            top: 0;
+    }
+
+    .logo-card{
+        width: 5.25rem;
+        position: absolute;
+            top: 2rem; left: 1.8rem;
+    }
+
+    .front-card .name-member{
+        font-size: 1rem;  
+        position: absolute;
+            top: 12.5rem; left: 1.8rem;  
+    }
+
+    .front-card .card-member{
+        font-size: 1.8rem;
+        position: absolute;
+            top: 8.2rem; left: 1.8rem;
+    }
+
+    .front-card .date-member{
+        font-size: 1rem;
+        position: absolute;
+            top: 12.5rem; left: 22rem;
+    }
+
+
+/*FORM*/
+
+    form{
+        width: 23.8125rem;
+        max-width: 100%;
+    }
+
+/*RESULT*/
+
+    .result{
+        width: 23.8125rem;
+        margin: 0;
+    }
+
+}
